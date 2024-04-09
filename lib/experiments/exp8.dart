@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-
-
-void main() {
-  runApp(Experiment8());
-}
-
 class Experiment8 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,20 +11,11 @@ class Experiment8 extends StatelessWidget {
     );
   }
 }
-
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('06_SAHILCHALKE_EXP8',
-        style: TextStyle(
-          fontSize: 20,
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
-        ),
-      ),
+      
       body: Center(
         child: GestureDetector(
           onTap: () {
@@ -46,7 +31,6 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -79,7 +63,6 @@ class SecondPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
