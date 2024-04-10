@@ -1,0 +1,85 @@
+import 'package:flutter/material.dart';
+
+
+void main() {
+  runApp(Experiment8());
+}
+
+class Experiment8 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/second': (context) => SecondPage(),
+      },
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('34_PARTHPATIL_EXP1',
+        style: TextStyle(
+          fontSize: 20,
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+        ),
+        ),
+      ),
+      body: Container(
+      color: Color.fromARGB(255, 40, 255, 2),
+
+      child: const Center(
+        
+        child: Text(
+          "Hello World",
+          style: TextStyle(
+            fontSize: 40,
+            color: Color.fromARGB(255, 0, 0, 0),
+            fontWeight: FontWeight.bold
+          ),
+
+        ),
+      ),
+    ),
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Second Page'),
+      ),
+      body: Center(
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            width: 200,
+            height: 200,
+            color: Colors.green,
+            child: Center(
+              child: Text(
+                'Tap to go back',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

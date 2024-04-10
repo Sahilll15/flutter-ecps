@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
-  runApp(Experiment8());
+  runApp(MyApp());
 }
 
-class Experiment8 extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomePage(),
-        '/second': (context) => SecondPage(),
-      },
-    );
+    return HomePage();
   }
 }
 
@@ -23,68 +16,59 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('06_SAHILCHALKE_EXP8',
-        style: TextStyle(
-          fontSize: 20,
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
+        title: Text(
+          '34_PARTHPATIL_EXP6',
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.black, // Changed color to black
+            fontWeight: FontWeight.bold,
+          ),
         ),
-        ),
+        backgroundColor: Colors.green, // Added background color to the app bar
       ),
-      body: Center(
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, '/second');
-          },
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.blue,
-            child: Center(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.green,
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text(
-                'Tap Me!',
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+                "34",
+                style: TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class SecondPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Page'),
-      ),
-      body: Center(
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.green,
-            child: Center(
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.green,
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text(
-                'Tap to go back',
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+                "parth",
+                style: TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),
           ),
-        ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.green,
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "patil",
+                style: TextStyle(color: Colors.white, fontSize: 25),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
